@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(83, 106, 236);
+    height: 4rem;
+    padding: 0 2rem;
+
+    color: white;
+}
+
+.link_list {
+    height: 100%;
+}
+
+.link_list button {
+    height: 100%;
+    background-color: rgb(83, 106, 236);
+    padding: .5rem;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+    width: 6rem;
+}
+
+.link_list button:hover {
+    background-color: rgb(120, 138, 243);
+}
+
+.link_list button:active {
+    font-size: .7rem;
+}
+
+.container {
+    padding: 2rem;
+}

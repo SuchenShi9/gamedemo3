@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-playground',
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  templateUrl: './playground.component.html',
+  styleUrl: './playground.component.css'
 })
-export class AboutComponent {
+export class PlaygroundComponent {
 
 }
