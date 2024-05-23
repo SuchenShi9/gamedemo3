@@ -1,9 +1,11 @@
-<h1>
-  Hello world
-</h1>
-
-<div>
-  <p>
-      This is my First Angular app. test information
-  </p>
+<header class="header">
+  <div>CVS Directory</div>
+  <div class="link_list">
+    <button routerLink="/directory" routerLinkActive="active" ariaCurrentWhenActive="page">Directory</button>
+    <button [routerLink]="['contact']">Contact Us</button>
+    <button [routerLink]="['about']">About</button>
+  </div>
+</header>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
