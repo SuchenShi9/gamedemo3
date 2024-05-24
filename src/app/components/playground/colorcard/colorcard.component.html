@@ -1,1 +1,11 @@
-<p>colorcard works!</p>
+<h1 class="" [ngStyle]="{color: titleColor}">This is Main Title</h1>
+<div class="container">
+    <div class="card_list" *ngFor="let card of cards" [ngStyle]="{
+        border: titleColor === card.color ? '2px solid ' : '',
+        borderColor: titleColor === card.color ? card.color : 'transparent'
+      }">
+        <h3> {{ card.title }}</h3>
+        <p>{{ card.content }}</p>
+        <button [ngStyle]="{ background: card.color }" (click)="changeTitleColor(card.color)">changeTColor</button>
+    </div>
+</div>

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Card } from './card.class';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-colorcard',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './colorcard.component.html',
   styleUrl: './colorcard.component.css'
 })

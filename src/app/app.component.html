@@ -1,11 +1,36 @@
-<header class="header">
-  <button class="" routerLink="/directory"><img src="assets/SS.png" alt="image"></button>
-  <div class="link_list">
-    <button routerLink="/directory" routerLinkActive="active" ariaCurrentWhenActive="page">Directory</button>
-    <button [routerLink]="['contact']">Contact Us</button>
-    <button [routerLink]="['about']">About</button>
-  </div>
+<header style="height: 80vh;">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button routerLink="/directory"><img src="assets/SS.png" alt="image"></button>
+      <span class="menu-spacer"></span>
+      <div class="link_list" fxShow="true" fxHide.lt-md>
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <button routerLink="/directory" routerLinkActive="active" ariaCurrentWhenActive="page">Directory</button>
+        <button [routerLink]="['contact']">Contact Us</button>
+        <button [routerLink]="['about']">About</button>
+        <!-- <a href="#" mat-button>Menu Item 1</a>
+        <a href="#" mat-button>Menu Item 2</a>
+        <a href="#" mat-button>Menu Item 3</a> -->
+      </div>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav position="end">
+      <mat-nav-list>
+        <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+        <a href="/directory" mat-list-item>Directory</a>
+        <a href="/contact" mat-list-item>Contact Us</a>
+        <a href="/about" mat-list-item>About</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </header>
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
