@@ -1,1 +1,9 @@
-<p>todolist works!</p>
+<input [(ngModel)]="userInput"><button (click)="addTodo()">Add</button>
+<p>{{ incompleteCount }} remaining out of {{ todoList.length }}</p>
+<ul class="list_style">
+    <li *ngFor="let todo of todoList; let i=index">
+        <span [ngStyle]="{textDecoration: todo.completed ? 'line-through' : ''}" (click)="toggleComplete(i)">
+            {{ todo.name }}
+        </span>
+    </li>
+</ul>
