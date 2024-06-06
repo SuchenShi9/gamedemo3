@@ -24,7 +24,7 @@ export class DictionaryComponent {
 
 
   async search() {
-    const apiKey = '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';
+    const apiKey = '';
     if (!apiKey) {
       throw new Error('API key is missing');
     }
