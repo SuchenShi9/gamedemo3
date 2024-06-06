@@ -1,1 +1,18 @@
-<p>angular-material works!</p>
+<button mat-raised-button color="primary" (click)="openDialog('0ms', '0ms')">Open dialog without animation</button>
+<button mat-raised-button (click)="openDialog('3000ms', '1500ms')">Open dialog slowly</button>
+
+<button mat-button color="primary">Primary</button>
+<button mat-button color="accent">Accent</button>
+<button mat-button color="warn">Warn</button>
+
+<button mat-raised-button color="primary">Primary</button>
+<button mat-raised-button color="accent">Accent</button>
+<button mat-raised-button color="warn">Warn</button>
+
+<mat-form-field>
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
