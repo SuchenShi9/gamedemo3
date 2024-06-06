@@ -5,6 +5,8 @@ import { AboutComponent } from './components/about/about.component';
 import { PlaygroundComponent } from './components/playground/playground.component';
 import { ColorcardComponent } from './components/playground/colorcard/colorcard.component';
 import { TodolistComponent } from './components/playground/todolist/todolist.component';
+import { DictionaryComponent } from './components/playground/dictionary/dictionary.component';
+import { AngularMaterialComponent } from './components/playground/angular-material/angular-material.component';
 
 export const routes: Routes = [
     { path: 'directory', title: 'Home', component: DirectoryComponent },
@@ -15,6 +17,8 @@ export const routes: Routes = [
         path: 'playground', children: [
             { path: 'colorcard', component: ColorcardComponent },
             { path: 'todolist', component: TodolistComponent },
+            { path: 'dictionary', component: DictionaryComponent },
+            { path: 'angularMaterial', component: AngularMaterialComponent },
 
         ]
     },

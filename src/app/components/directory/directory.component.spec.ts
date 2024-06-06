@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+
 import { DirectoryComponent } from './directory.component';
 
 describe('DirectoryComponent', () => {
@@ -10,8 +11,8 @@ describe('DirectoryComponent', () => {
     await TestBed.configureTestingModule({
       imports: [DirectoryComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(DirectoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

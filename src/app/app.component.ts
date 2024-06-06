@@ -10,10 +10,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, FlexLayoutModule, MatButtonModule, MatSlideToggleModule, MatRadioModule, CommonModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, FlexLayoutModule, MatButtonModule,
+    MatSlideToggleModule, MatRadioModule, CommonModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
